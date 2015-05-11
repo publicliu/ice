@@ -1,0 +1,13 @@
+<assembly>
+	<id>dbscript</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<baseDirectory>/</baseDirectory>
+	<files>
+		<file>
+			<source>src/test/resources/db/ice_mysql_base_db.sql</source>
+			<outputDirectory>/mysqlscript</outputDirectory>
+		</file>
+	</files>
+</assembly>
