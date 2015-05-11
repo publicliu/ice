@@ -217,6 +217,7 @@
 
 
 	<modules>
+		<module>ice-parent</module>
 		<module>ice-common</module>
 		<module>ice-api</module>
 		<module>ice-domain</module>

@@ -6,6 +6,7 @@
     <artifactId>ice-parent</artifactId>
     <groupId>net.lw.ice</groupId>
     <version>0.1-SNAPSHOT</version>
+    <relativePath>../ice-parent</relativePath>
   </parent>
   <groupId>net.lw.ice</groupId>
   <artifactId>ice-web</artifactId>
