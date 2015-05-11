@@ -221,13 +221,4 @@
 
 	</dependencyManagement>
 
-
-	<modules>
-		<module>ice-common</module>
-		<module>ice-api</module>
-		<module>ice-domain</module>
-		<module>ice-person</module>
-		<module>ice-web</module>
-		<module>ice-web</module>
-	</modules>
 </project>

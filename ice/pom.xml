@@ -4,20 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.lw.ice</groupId>
-	<artifactId>ice-parent</artifactId>
+	<artifactId>ice</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>ice-parent</name>
+	<name>ice</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<!-- 主要依赖库的版本定义 -->
-		<spring.version>4.0.1.RELEASE</spring.version>
-		<hibernate.version>4.1.9.Final</hibernate.version>
-		<slf4j.version>1.7.5</slf4j.version>
-		<jackson.version>2.2.2</jackson.version>
-
 		<!-- Plugin的属性定义 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- maven编辑器的jdk版本设置 -->
