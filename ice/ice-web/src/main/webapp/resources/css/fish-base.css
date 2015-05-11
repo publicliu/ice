@@ -1,0 +1,222 @@
+#loading { 
+	position: absolute;
+	width: 180px;
+	margin: -70px 0 0 -90px;
+	height: 140px;
+	top: 50%;
+	left: 50%;
+}
+
+#loading .title {
+	font-size:16px; 
+	position: absolute;
+	display: block;
+  	top: 0;
+    left: 0px;
+    width:180px;
+    height: 27px;
+}
+
+#loading .logo {
+	background: url(../images/loading.gif) no-repeat;
+	position: absolute;
+	display: block;
+	top: 25px;
+	left: 22px;
+	width: 120px;
+	height: 120px;
+}
+
+.fish-logo{
+	font-size: 20px;
+	font-weight: normal;
+	font-family: "Helvetica Neue", Arial, Verdana, sans-serif; 
+}
+.fish-theme{
+	margin-left: 50px;
+	margin-right: 10px;
+}
+/**grid隐藏动作列*/
+.actioncolumn-hidden {
+	visibility: hidden;
+}
+
+/**菜单按钮图标**/
+.queryBtn{
+	background: url(../images/query.gif) left center no-repeat !important;
+}
+.addBtn{
+	background: url(../images/add.gif) left center no-repeat !important;
+}
+.updateBtn{
+	background: url(../images/update.png) left center no-repeat !important;
+}
+.removeBtn{
+	background: url(../images/remove.png) left center no-repeat !important;
+}
+.deleteBtn{
+	background: url(../images/delete.gif) left center no-repeat !important;
+}
+.refreshBtn{
+	background: url(../images/refresh.png) left center no-repeat !important;
+}
+.sureBtn {
+	background: url(../images/accept.png) left center no-repeat !important;
+}
+.returnBtn {
+	background: url(../images/return.png) left center no-repeat !important;
+}
+.closeBtn {
+	background: url(../images/close.png) left center no-repeat !important;
+}
+.headerItemConfig {
+	background: url(../images/user_dark.gif) !important;
+}
+.adminBtn {
+	background: url(../images/user_light.gif) left center no-repeat !important;
+}
+.connectBtn {
+	background: url(../images/connect.png) left center no-repeat !important;
+}
+.detailBtn {
+	background: url(../images/detail.png) left center no-repeat !important;
+}
+.exportBtn {
+	background: url(../images/down.gif) left center no-repeat !important;
+}
+.cardReceiveBtn {
+	background: url(../images/shape_move_backwards.png) left center no-repeat !important;
+}
+.cardHandoverBtn {
+	background: url(../images/shape_move_forwards.png) left center no-repeat !important;
+}
+.cardDetoryBtn {
+	background: url(../images/report_delete.png) left center no-repeat !important;
+}
+.importBtn {
+	background: url(../images/table_add.png) left center no-repeat !important;
+}
+.moveBtn {
+	background: url(../images/shape_square_go.png) left center no-repeat !important;
+}
+.versionDown {
+	background: url(../images/version_down.gif) left center no-repeat !important;
+}
+.ad{
+	background: url(../images/photo.png) left center no-repeat !important;
+}
+.adAdd{
+	background: url(../images/photo_add.png) left center no-repeat !important;
+}
+.generateVersion{
+	background: url(../images/application_go.png) left center no-repeat !important;
+}
+.adPreview{
+	background: url(../images/picture.png) left center no-repeat !important;
+}
+.more{
+	background: url(../images/application_cascade.png) left center no-repeat !important;
+}
+.join{
+	background: url(../images/group_add.png) left center no-repeat !important;
+}
+.clear {
+	background: url(../images/wand.png) left center no-repeat !important;
+}
+.send {
+	background: url(../images/comment_add.png) left center no-repeat !important;
+}
+.leave {
+	background: url(../images/group_delete.png) left center no-repeat !important;
+}
+.db-save{
+	background: url(../images/database_save.png) left center no-repeat !important;
+}
+.exportToExcel{
+	background: url(../images/excel.png) left center no-repeat !important;
+}
+.openSort {
+	background: url(../images/door_open.png) left center no-repeat !important;
+}
+.closeSort {
+	background: url(../images/door.png) left center no-repeat !important;
+}
+
+.pointerLink{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.grid-x-column-header-checkbox{
+	display : none;	
+}
+
+.loginImg {
+	position : absolute;
+	width : 600px;
+	height : 300px;
+	z-index: -9999;
+	bottom : 300px;
+	right : 500px; 
+}
+
+#loginPanel{
+	position: absolute;
+	right : 470px;
+	bottom: 340px;
+	z-index: 100;
+}
+
+.hiddenComp{
+	visibility: hidden;
+}
+.changeCursor{
+	cursor: pointer;	
+}
+
+/* Notification.js */
+.ux-notification-window .x-window-body {
+	text-align: center;
+	padding: 5px 5px 5px 5px;
+	/* width: 200px; */
+	height: 20px;
+}
+.ux-notification-icon-information {
+	background-image: url('../images/icon16_info.png');
+}
+
+.ux-notification-icon-error {
+	background-image: url('../images/icon16_error.png');
+}
+.ux-notification-light .x-window-header {
+	background-color: transparent;
+}
+
+body .ux-notification-light {
+	background-image: url('../images/fader.png');
+}
+
+.ux-notification-light .x-window-body {
+	text-align: center;
+	padding: 5px 5px 5px 5px;
+	width: 200px;
+	background-color: transparent;
+	border: 0px solid white;
+}
+
+/*extjs disalbed*/
+.x-item-disabled .x-form-item-label{
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6; }
+.x-item-disabled .x-form-field{
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6; }
+.x-item-disabled .x-form-cb-label{
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6; }
+.x-item-disabled .x-form-trigger {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6; }  
+.x-item-disabled .x-grid-cell{
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6; }
