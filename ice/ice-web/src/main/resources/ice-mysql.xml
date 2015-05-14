@@ -61,7 +61,7 @@
 				</prop>
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.format_sql">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">none</prop>
 			</props>
 		</property>
 		<property name="packagesToScan">
@@ -71,7 +71,7 @@
 		</property>
 	</bean>
 
-	<!-- 测试数据 -->
+	<!-- 测试数据
 	<import resource="classpath:init-data.xml"/>
-
+-->
 </beans>
