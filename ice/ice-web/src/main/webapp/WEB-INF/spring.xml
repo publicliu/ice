@@ -30,7 +30,7 @@
 				<!-- <bean class = "org.springframework.http.converter.StringHttpMessageConverter">
 					<property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
 				</bean>  -->
-				<bean class = "com.netsoft.sample.web.util.HttpMessageConverter">
+				<bean class = "net.lw.ice.web.util.HttpMessageConverter">
 					<property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
 				</bean>
 				<ref bean="mappingJackson2HttpMessageConverter" />

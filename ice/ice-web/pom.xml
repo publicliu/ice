@@ -19,6 +19,7 @@
 		<ice-common.version>0.1-SNAPSHOT</ice-common.version>
 		<ice-api.version>0.1-SNAPSHOT</ice-api.version>
 		<ice-domain.version>0.1-SNAPSHOT</ice-domain.version>
+		<ice-person.version>0.1-SNAPSHOT</ice-person.version>
 	</properties>
 
 <dependencies>
@@ -45,6 +46,12 @@
 			<groupId>net.lw.ice</groupId>
 			<artifactId>ice-domain</artifactId>
 			<version>${ice-domain.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.lw.ice</groupId>
+			<artifactId>ice-person</artifactId>
+			<version>${ice-person.version}</version>
 		</dependency>
 
 		<dependency>
@@ -80,7 +87,7 @@
 				<version>8.1.5.v20120716</version>
 				<configuration>
 					<webAppConfig>
-						<contextPath>/sample-web</contextPath>
+						<contextPath>/ice-web</contextPath>
 					</webAppConfig>
 					<webDefaultXml>src/test/resources/webdefault.xml</webDefaultXml>
 					<scanIntervalSeconds>0</scanIntervalSeconds>

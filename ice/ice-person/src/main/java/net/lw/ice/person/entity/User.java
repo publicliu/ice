@@ -69,7 +69,7 @@ public class User implements IUser {
 	@Column(name = "ACCESS_TIME", nullable = true)
 	private Date accessTime;
 
-	@org.hibernate.annotations.Type(type = "com.netsoft.sample.domain.util.BooleanUserType")
+	@org.hibernate.annotations.Type(type = "net.lw.ice.domain.util.BooleanUserType")
 	@Column(name = "IS_SYSTEM", nullable = false, columnDefinition = "CHAR", length = 1)
 	private boolean system;
 
