@@ -66,10 +66,10 @@ public class UserController {
 			}
 		}
 
-		IPageResult<IUser> pageResult = orgService.page(orgCode, start, limit, filter);
-		model.addAttribute("success", true);
-		model.addAttribute("total", pageResult.getTotal());
-		model.addAttribute("data", UserForm.toForms(pageResult.list()));
+//		IPageResult<IUser> pageResult = orgService.page(orgCode, start, limit, filter);
+//		model.addAttribute("success", true);
+//		model.addAttribute("total", pageResult.getTotal());
+//		model.addAttribute("data", UserForm.toForms(pageResult.list()));
 		return model;
 	}
 
@@ -83,13 +83,8 @@ public class UserController {
 			return model;
 		}
 		IUser user = userService.make();
-		user.setCode(form.getCode());
-		user.setName(form.getName());
-		user.setMobile(form.getMobile());
-		user.setPhone(form.getPhone());
-		user.setEmail(form.getEmail());
+//		user.setCode(form.getCode());
 		user.setSystem(false);
-		user.setOrganization(orgService.getByCode(orgCode));
 
 		try {
 			user = userService.add(user);
@@ -142,11 +137,7 @@ public class UserController {
 			return result;
 		}
 
-		user.setCode(form.getCode());
-		user.setName(form.getName());
-		user.setMobile(form.getMobile());
-		user.setPhone(form.getPhone());
-		user.setEmail(form.getEmail());
+//		user.setCode(form.getCode());
 
 		try {
 			userService.update(user);

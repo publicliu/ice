@@ -14,6 +14,9 @@ Ext.define('Eway.view.Header',{
      },'-',{
      	text: '人员管理',
      	menu : [{
+     		action : 'person.Person',
+     		text : '人员管理'
+     	},{
      		action : 'user.User',
      		text : '用户管理'
      	},{

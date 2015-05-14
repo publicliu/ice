@@ -3,7 +3,7 @@ package net.lw.ice.person.service.db;
 import java.util.List;
 
 import net.lw.ice.api.person.entity.IOrganization;
-import net.lw.ice.api.person.entity.IUser;
+import net.lw.ice.api.person.entity.IPerson;
 import net.lw.ice.api.person.service.IOrganizationService;
 import net.lw.ice.common.IFilter;
 import net.lw.ice.common.IPageResult;
@@ -108,22 +108,20 @@ public class OrganizationService implements IOrganizationService{
 		dao.update(organization);
 	}
 
+
 	@Override
-	public List<IUser> listUser(String orgCode) {
-		IOrganization org = getByCode(orgCode);
-		String hql = "select u from User u where u.organization.id = ? ";
-		return dao.findByHQL(hql, org.getId());
+	public List<IPerson> listByOrgId(String orgId) {
+		return null;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
-	public IPageResult<IUser> page(String orgCode, int offset, int limit,
-			IFilter filter) {
-		IOrganization org = getByCode(orgCode);
-		String hql = "select u from User u where u.organization.id = ? ";
-		return (IPageResult<IUser>)this.dao.page(offset, limit,filter,hql, org.getId());
+	public IPageResult<IPerson> listByOrgCode(String orgCode,int offset, int limit, IFilter filter) {
+		StringBuffer sql = new StringBuffer();
+		sql.append("select p from Person p where p.organization.id = ?");
+		IOrganization org = this.getByCode(orgCode);
+		IPageResult<IPerson> persons =  (IPageResult<IPerson>) dao.page(offset, limit, sql.toString(), org.getId());
+		return persons;
 	}
-
 
 
 

@@ -17,6 +17,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 import net.lw.ice.api.person.entity.IOrganization;
+import net.lw.ice.api.person.entity.IPerson;
 import net.lw.ice.api.person.entity.IUser;
 import net.lw.ice.common.util.MsgDigestAlgorithm;
 
@@ -38,23 +39,6 @@ public class User implements IUser {
 	@Column(name = "ID")
 	private long id;
 
-	/**
-	 * 账号（使用人员信息的编号）
-	 */
-	@Column(name = "CODE", unique = true, nullable = false, length = 40)
-	private String code;
-
-	@Column(name = "NAME", length = 40)
-	private String name;
-
-	@Column(name = "MOBILE", length = 11)
-	private String mobile;
-
-	@Column(name = "PHONE", length = 20)
-	private String phone;
-
-	@Column(name = "EMAIL", length = 20)
-	private String email;
 
 	/**
 	 * 密码
@@ -76,9 +60,9 @@ public class User implements IUser {
 	@Column(name = "CREATE_USER_ID")
 	private long createUserId;
 
-	@ManyToOne(fetch = FetchType.LAZY, targetEntity =net.lw.ice.person.entity.Organization.class)
-	@JoinColumn(name = "ORGANIZATION_ID")
-	private IOrganization organization;
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity =net.lw.ice.person.entity.Person.class)
+	@JoinColumn(name = "PERSON_ID")
+	private IPerson person;
 
 	/*
 	 * 密码的明文
@@ -100,44 +84,28 @@ public class User implements IUser {
 	}
 
 	public String getCode() {
-		return this.code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
+		return this.person.getCode();
 	}
 
 	public String getName() {
-		return name;
+		return person.getName();
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getMobile() {
-		return mobile;
+		return person.getMobile();
 	}
 
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
 
 	public String getPhone() {
-		return phone;
+		return person.getPhone();
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
 
 	public String getEmail() {
-		return email;
+		return person.getEmail();
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
 	public String getPassword() {
 		return this.password;
@@ -149,12 +117,24 @@ public class User implements IUser {
 
 	@Override
 	public IOrganization getOrganization() {
-		return this.organization;
+		return this.person.getOrganization();
 	}
 
+
+	/* (non-Javadoc)
+	 * @see net.lw.ice.api.person.entity.IUser#getPerson()
+	 */
 	@Override
-	public void setOrganization(IOrganization organization) {
-		this.organization = organization;
+	public IPerson getPerson() {
+		return this.person;
+	}
+
+	/* (non-Javadoc)
+	 * @see net.lw.ice.api.person.entity.IUser#setPerson(net.lw.ice.api.person.entity.IPerson)
+	 */
+	@Override
+	public void setPerson(IPerson person) {
+		this.person = person;
 	}
 
 	public Date getAccessTime() {

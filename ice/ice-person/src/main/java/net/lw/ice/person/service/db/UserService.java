@@ -2,7 +2,9 @@ package net.lw.ice.person.service.db;
 
 import java.util.List;
 
+import net.lw.ice.api.person.entity.IPerson;
 import net.lw.ice.api.person.entity.IUser;
+import net.lw.ice.api.person.service.IPersonService;
 import net.lw.ice.api.person.service.IUserService;
 import net.lw.ice.common.IFilter;
 import net.lw.ice.common.IPageResult;
@@ -25,6 +27,9 @@ public class UserService implements IUserService {
 
 	@Autowired
 	private IGenericDao dao;
+
+	@Autowired
+	private IPersonService personService;
 
 	@Override
 	public IUser add(IUser user) {
@@ -58,9 +63,11 @@ public class UserService implements IUserService {
     @Transactional(noRollbackFor = {AppException.class,PasswordErrorException.class})
     public IUser login(String userCode,String plainText){
         User user = null;
+
         try{
             //验证用户名是否存在
-            user = dao.findUniqueByHql("from User user where user.code = ?", userCode);
+        	IPerson person = personService.getByCode(userCode);
+            user = dao.findUniqueByHql("from User user where user.person.id = ?", person.getId());
             if(user == null){
                 throw new NotFoundException(String.format("输入的用户名[%s]不存在,请重新输入！",userCode));
             }

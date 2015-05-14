@@ -8,18 +8,11 @@ public interface IPerson {
      *
      * @return 标识
      */
-    public String getGuid();
+    public long getId();
 
-    public void setGuid(String guid);
-
-    /**
-     * 外部唯一编号
-     *
-     * @return 编号
-     */
-    public String getCode();
 
     public void setCode(String code);
+    public String getCode();
 
     /**
      * 返回人员姓名

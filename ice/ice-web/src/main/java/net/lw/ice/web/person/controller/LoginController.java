@@ -58,6 +58,7 @@ public class LoginController {
 			userSession.setOrgCode(org.getCode());
 			session.setAttribute(FishWebUtils.USER, userSession);
 		}catch(AppException app){
+			logger.error(app.getMessage());
 			result.addAttribute("success", false);
 			result.addAttribute("message", app.getMessage());
 		}

@@ -1,8 +1,10 @@
 package net.lw.ice.web.init;
 
 import net.lw.ice.api.person.entity.IOrganization;
+import net.lw.ice.api.person.entity.IPerson;
 import net.lw.ice.api.person.entity.IUser;
 import net.lw.ice.api.person.service.IOrganizationService;
+import net.lw.ice.api.person.service.IPersonService;
 import net.lw.ice.api.person.service.IUserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +17,12 @@ public class IceInit {
 
 	@Autowired
 	private IUserService userService;
+	@Autowired
+	private IPersonService personService;
 
 	public void init(){
-//		this.initOrg();
-//		this.initUser();
+		this.initOrg();
+		this.initUser();
 	}
 
 	private void initOrg(){
@@ -53,12 +57,18 @@ public class IceInit {
 	}
 
 	private void initUser(){
+
+		IPerson person = personService.make();
+		person.setName("admin");
+		person.setCode("admin");
+		person.setMobile("13805146805");
+		person.setOrganization(organizationService.getByCode("root"));
+		personService.add(person);
+
+
 		IUser user = userService.make();
-		user.setCode("admin");
-		user.setMobile("13805146805");
-		user.setName("admin");
-		IOrganization organization = organizationService.getByCode("root");
-		user.setOrganization(organization);
+		user.setPlainText("888888");
+		user.setPerson(person);
 		userService.add(user);
 	}
 

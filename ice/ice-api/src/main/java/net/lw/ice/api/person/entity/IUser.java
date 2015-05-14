@@ -10,25 +10,18 @@ public interface IUser {
 
 	public String getCode();
 
-	public void setCode(String code);
-
 	public IOrganization getOrganization();
-	/**
-     * 设置人员所属组织机构
-     */
-    public void setOrganization(IOrganization organization);
+
+    public IPerson getPerson();
+	public void setPerson(IPerson person);
 
 	public String getName();
-	public void setName(String name);
 
 	public String getMobile();
-	public void setMobile(String mobile);
 
 	public String getPhone();
-	public void setPhone(String phone);
 
 	public String getEmail();
-	public void setEmail(String email);
 
 	public String getPassword();
 

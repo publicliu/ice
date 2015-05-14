@@ -3,6 +3,7 @@ package net.lw.ice.api.person.service;
 import java.util.List;
 
 import net.lw.ice.api.person.entity.IOrganization;
+import net.lw.ice.api.person.entity.IPerson;
 import net.lw.ice.api.person.entity.IUser;
 import net.lw.ice.common.IFilter;
 import net.lw.ice.common.IPageResult;
@@ -105,7 +106,13 @@ public interface IOrganizationService {
      */
     public IPageResult<IOrganization> pageChildrenByCode(int offset, int limit, IFilter filter, String orgCode);
 
-    public List<IUser> listUser(String orgCode);
-    public IPageResult<IUser> page(String orgCode,int offset,int limit,IFilter filter);
+
+    /**
+   	 * 根据所属机构取人员
+   	 * @return
+   	 */
+   	public List<IPerson> listByOrgId(String orgId);
+
+   	public IPageResult<IPerson> listByOrgCode(String orgCode,int offset,int limit,IFilter filter);
 
 }

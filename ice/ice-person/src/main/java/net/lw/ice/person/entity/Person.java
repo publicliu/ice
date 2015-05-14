@@ -34,11 +34,6 @@ public class Person implements IPerson {
 	@Column(name = "ID")
 	private long id;
 
-	/**
-	 * 编号
-	 */
-	@Column(name = "CODE", nullable = true, length = 40)
-	private String code;
 
 	/**
 	 * 工号
@@ -51,6 +46,9 @@ public class Person implements IPerson {
 	 */
 	@Column(name = "NAME", nullable = false, length = 40)
 	private String name;
+
+	@Column(name = "CODE", nullable = false, length = 40)
+	private String code;
 
 	/**
 	 * 生日
@@ -116,13 +114,6 @@ public class Person implements IPerson {
 		this.id = id;
 	}
 
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
 
 	public String getJobNum() {
 		return jobNum;
@@ -212,14 +203,21 @@ public class Person implements IPerson {
 		this.remark = remark;
 	}
 
-	@Override
-	public String getGuid() {
-		return String.valueOf(id);
+
+	/**
+	 * @return the code
+	 */
+	public String getCode() {
+		return code;
 	}
 
-	@Override
-	public void setGuid(String guid) {
-		id = Long.valueOf(guid);
+	/**
+	 * @param code the code to set
+	 */
+	public void setCode(String code) {
+		this.code = code;
 	}
+
+
 
 }

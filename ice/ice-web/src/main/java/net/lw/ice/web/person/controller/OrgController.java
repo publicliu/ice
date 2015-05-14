@@ -53,9 +53,7 @@ public class OrgController {
 					continue;
 				} else {
 					// 去掉前端页面传来的sort排序字段
-					if ("sort".equals(name)) {
-						continue;
-					} else if ("orgCode".equals(name)) {
+					if ("orgCode".equals(name)) {
 						filter.like("code", request.getParameter(name));
 					} else if ("orgName".equals(name)) {
 						filter.like("name", request.getParameter(name));
@@ -128,7 +126,7 @@ public class OrgController {
 			return result;
 		}
 
-		List<IUser> users = orgService.listUser(org.getCode());
+		/*List<IUser> users = orgService.listUser(org.getCode());
 		if(users != null && users.size()>0){
 			result.addAttribute(IceConstant.SUCCESS, false);
 			result.addAttribute(IceConstant.ERROR_MSG, "删除失败，本机构下还有用户无法删除");
@@ -143,7 +141,7 @@ public class OrgController {
 			result.addAttribute(IceConstant.SUCCESS, false);
 			result.addAttribute(IceConstant.ERROR_MSG, "删除失败");
 		}
-
+*/
 		return result;
 	}
 

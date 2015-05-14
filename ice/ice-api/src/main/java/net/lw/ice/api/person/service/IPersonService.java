@@ -2,6 +2,7 @@ package net.lw.ice.api.person.service;
 
 import java.util.List;
 
+import net.lw.ice.api.person.entity.IOrganization;
 import net.lw.ice.api.person.entity.IPerson;
 import net.lw.ice.common.IFilter;
 import net.lw.ice.common.IPageResult;
@@ -22,6 +23,7 @@ public interface IPersonService {
      * @return
      */
     public IPerson get(String guid);
+    public IPerson getByCode(String code);
 
 
     /**
@@ -61,16 +63,9 @@ public interface IPersonService {
      */
     public List<IPerson> list(IFilter filter);
 
-    public IPageResult<IPerson> page(int offset, int limit);
-
     public IPageResult<IPerson> page(int offset, int limit, IFilter filter);
 
-    /**
-	 * 根据所属机构取人员
-	 * @return
-	 */
-	public List<IPerson> getByOrg(String orgId);
+    public IOrganization getOrg(String guid);
 
-	public IPageResult<IPerson> getByOrg(int offset,int limit,IFilter filter);
 
 }
