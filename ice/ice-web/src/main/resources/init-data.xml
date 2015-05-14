@@ -7,7 +7,5 @@
 			http://www.springframework.org/schema/context
 			http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-<!--
-	<bean class = "com.netsoft.sample.web.init.SampleInit" init-method="init"/>
-	 -->
+	<bean class = "net.lw.ice.web.init.IceInit" init-method="init"/>
 </beans>
