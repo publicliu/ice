@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>网软数据采样平台</title>
+<title>ICE综合管理平台</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <link rel="shortcut icon" type="image/ico" href="resources/images/logo.ico" />
