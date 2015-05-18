@@ -24,6 +24,8 @@
 
 	<context:component-scan base-package="net.lw.ice.web.person.controller">
 	</context:component-scan>
+	<context:component-scan base-package="net.lw.ice.web.app.weixin.meetlove">
+	</context:component-scan>
 
 	<!-- 默认视图 -->
 	<bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">

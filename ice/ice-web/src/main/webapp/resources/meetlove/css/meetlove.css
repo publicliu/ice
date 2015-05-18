@@ -1,0 +1,48 @@
+#images-view .thumb-wrap {
+	float: left;
+	margin: 5px;
+	padding: 0px;
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
+	height:80px;
+}
+
+#images-view .thumb {
+	padding: 0px;
+	padding-bottom: 0;
+	width: 60px;
+	height: 60px;
+}
+
+#images-view .thumb ul{
+	padding-left: 0px;
+	*margin-left:0px;/**hack IE7 */
+	_margin-left:0px;
+	padding-top:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	list-style-type :none;
+}
+
+#images-view .thumb img {
+	padding: 0px;
+	height: 60px;
+	width: 60px;
+}
+
+#images-view .thumb .left {
+	float: left;
+	padding: 0px;
+}
+
+#images-view .x-item-over {
+	border: 1px solid #1264bd;
+	padding: 3px;
+}
+
+#images-view ul li {
+	float: left;
+	overflow: hidden;
+}

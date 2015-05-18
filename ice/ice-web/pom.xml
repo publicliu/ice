@@ -20,6 +20,7 @@
 		<ice-api.version>0.1-SNAPSHOT</ice-api.version>
 		<ice-domain.version>0.1-SNAPSHOT</ice-domain.version>
 		<ice-person.version>0.1-SNAPSHOT</ice-person.version>
+		<meetlove-api.version>0.1-SNAPSHOT</meetlove-api.version>
 	</properties>
 
 <dependencies>
@@ -40,6 +41,12 @@
 			<groupId>net.lw.ice</groupId>
 			<artifactId>ice-api</artifactId>
 			<version>${ice-api.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.lw.meetlove</groupId>
+			<artifactId>meetlove-api</artifactId>
+			<version>${meetlove-api.version}</version>
 		</dependency>
 
 		<dependency>

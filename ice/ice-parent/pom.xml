@@ -216,6 +216,20 @@
 				<scope>provided</scope>
 			</dependency>
 
+			<!-- xml -->
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>1.6.1</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+	        	<groupId>jaxen</groupId>
+	        	<artifactId>jaxen</artifactId>
+	        	<version>1.1-beta-11</version>
+	        	<type>jar</type>
+	        </dependency>
 
 		</dependencies>
 

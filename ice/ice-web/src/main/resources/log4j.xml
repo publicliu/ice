@@ -14,7 +14,7 @@
 	</appender>
 
     <logger name="tranlog" additivity="false">
-       <level value="info" />
+       <level value="debug" />
        <appender-ref ref="transactionLog"/>
     </logger>
 
@@ -38,33 +38,33 @@
 
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<logger name="org.springframework.beans">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<logger name="org.springframework.context">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<logger name="org.springframework.web">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<logger name="org.hibernate">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<!-- Log JDBC bind parameter runtime arguments -->
 	<logger name="org.hibernate.type">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<!-- Root Logger -->
 	<root>
-		<priority value="info" />
+		<priority value="debug" />
 		<appender-ref ref="console" />
 		<appender-ref ref="file" />
 	</root>

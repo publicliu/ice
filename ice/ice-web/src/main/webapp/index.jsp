@@ -10,7 +10,7 @@
   <link rel="shortcut icon" type="image/ico" href="resources/images/logo.ico" />
 
   <link rel="stylesheet" type="text/css" href="extjs/packages/ext-theme-classic/build/resources/ext-theme-classic-all.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="resources/css/fish-base.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="resources/ice/css/fish-base.css" media="all" />
   <script type="text/javascript" src="extjs/ext-all-debug.js"></script>
   <script type="text/javascript" src="extjs/locale/ext-lang-zh_CN.js"></script>
 
