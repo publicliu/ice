@@ -41,11 +41,16 @@
 		<dependency>
         	<groupId>jaxen</groupId>
         	<artifactId>jaxen</artifactId>
+        	<exclusions>
+		    <exclusion>
+		        <groupId>com.ibm.icu</groupId>
+		        <artifactId>icu4j</artifactId>
+		    </exclusion>
+</exclusions>
         </dependency>
         <dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
 		</dependency>
-
 	</dependencies>
 </project>

@@ -34,4 +34,8 @@ public class FishWebUtils {
 	public static long getSessionUserId(HttpServletRequest request){
 		return FishWebUtils.getUserSession(request).getUserId();
 	}
+
+	public static String getResourcesPath(){
+		return "D:\\meetlove";
+	}
 }
